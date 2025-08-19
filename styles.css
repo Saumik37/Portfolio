@@ -71,6 +71,55 @@ body {
     background: #f8f9ff;
 }
 
+/* Dark theme section backgrounds */
+body.dark-theme .section#home {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body.dark-theme .section#about,
+body.dark-theme .section#projects,
+body.dark-theme .section#contact {
+    background: #242424;
+}
+
+body.dark-theme .section#skills,
+body.dark-theme .section#achievements {
+    background: #1a1a1a;
+}
+
+/* Remove the prev/next classes as they're not needed with the new approach */
+.section.prev,
+.section.next {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+/* Ensure footer doesn't interfere */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 0; /* Lower z-index so it stays behind sections */
+}
+
+/* Make sure navbar stays on top */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000; /* Highest z-index for navbar */
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    height: 80px;
+}
+
 /* Remove the prev/next classes as they're not needed with the new approach */
 .section.prev,
 .section.next {
